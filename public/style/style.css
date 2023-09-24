@@ -33,6 +33,12 @@ body {
     margin: 0;
 }
 
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
 form button {
     background-color: #3D518C;
     border: #3D518C 1px solid;
