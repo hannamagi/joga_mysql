@@ -57,6 +57,18 @@ app.get('/article/:slug', (req, res) => {
     })
 })
 
+app.get("/", (req, res) => {
+    let query = 'SELECT * FROM article';
+    let articles = []
+    con.query(query, (err, result) => {
+        if (err) throw err
+        articles = result
+        res.render('index.hbs', {
+            articles: articles
+        })
+    })
+});
+
 app.listen(4000, () => {
     console.log('App is starting at http://localhost:4000')
 })
